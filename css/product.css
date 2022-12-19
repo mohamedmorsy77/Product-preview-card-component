@@ -1,0 +1,201 @@
+:root {
+     --Dark_cyan : hsl(158, 36%, 37%);
+     --Cream : hsl(30, 38%, 92%);
+     --Very_dark_blue : hsl(212, 21%, 14%) ;
+     --Dark_grayish_blue : hsl(228, 12%, 48%); 
+     --White : hsl(0, 0%, 100%);
+     --fw-normal : 500;
+     --fw-bold : 700 ;
+     --ff-fra : 'Fraunces', serif;
+     --ff-mon : 'Montserrat', sans-serif;
+
+}
+
+* {
+    
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--ff-mon);
+    background-color: var(--Cream);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+   
+}
+.container {
+   margin: 68px auto;
+   max-width: 600px;
+   background-color: var(--White);
+   overflow: hidden;
+   border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+@media (max-width: 628px) {
+    .container  {
+       width: 400px;
+       
+    }
+}
+@media (max-width: 375px) {
+    .container {
+        max-width: 317px;
+        margin: 15px 10px;
+        
+
+    }
+}
+.container .content {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   
+   
+   
+} 
+@media (max-width:  628px) {
+    .container .content {
+        grid-template-columns: 1fr;
+        
+      
+    }
+}
+.container .left img {
+    max-width: 100%;
+    display: inherit;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    
+}
+@media only screen and (max-width:  628px) {
+    .container .left img {
+          width: 100%;
+          height: 406px;
+          object-fit: cover;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          border-bottom-left-radius: 0px;
+        }
+}
+@media only screen and (max-width: 375px) {
+    .container .left img {
+       max-height: 290px;
+       width: 317px;
+        
+    }
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    padding: 35px 37px;
+   
+}
+.right .first-p {
+    text-transform: uppercase;
+    color: var(--Dark_grayish_blue);
+    font-family: var(--ff-mon);
+    font-weight: var(--fw-normal);
+}
+.right h1 {
+    color: black;
+    font-size: 34px;
+    font-family: var(--ff-fra);
+}
+@media (max-width: 375px) {
+    .right h1 {
+        width: 250px;
+    }
+}
+.right .second-p {
+    line-height: 1.5;
+    color: var(--Dark_grayish_blue);
+   
+    
+}
+@media   (max-width: 628px) {
+    .right .second-p{
+        font-size: 20px;
+    }
+}
+@media (max-width: 375px) {
+    .right .second-p {
+        font-size: 12px;
+        width: 250px;
+    }
+}
+
+.right .price {
+    display: flex;
+    align-items: center;
+    margin-right: 80px;
+}
+@media  (max-width:  628px) {
+    .right .price {
+        margin-right: 172px;
+    }
+}
+.price .current_price {
+   font-weight: var(--fw-bold);
+   font-size: 30px;
+   color: var(--Dark_cyan);
+}
+.price .old_price {
+   text-decoration: line-through;
+   color: var(--Dark_grayish_blue);
+   margin-left: 10px;
+}
+@media only screen and (max-width: 628px) {
+    .price .old_price {
+       margin-left: 13px;
+    }
+}
+
+button {
+    max-width: 225px;
+    padding: 15px;
+    border-style: none;
+    background-color: var(--Dark_cyan);
+    color: var(--White);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    cursor: pointer;
+    font-weight: var(--fw-bold);
+    transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -ms-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+}
+@media only screen and (max-width: 628px) {
+    button {
+        margin-left: 12px;
+        max-width: 300px;
+    }
+}
+@media only screen and (max-width: 375px) {
+    button {
+        margin-left: -4px;
+        max-width: 250px;
+         
+    }
+}
+button img {
+    margin-right: 7px;
+}
+button:hover {
+   background-color:  hsl(158, 77%, 25%);
+}
+
+
